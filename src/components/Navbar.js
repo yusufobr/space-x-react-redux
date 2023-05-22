@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import style from './Navbar.module.css';
 import logo from '../assets/logo.png';
 
 const Navbar = () => (
@@ -14,8 +15,8 @@ const Navbar = () => (
     <nav className="flex gap-4 text-blue-400">
       <NavLink to="/">Rockets</NavLink>
       <NavLink to="/missions">Missions</NavLink>
-      <span className="w-[1px] h-[24px] bg-gray-400" />
-      <NavLink to="/myprofile">My profile</NavLink>
+      <span className={style.devide} />
+      <NavLink to="/profile">My Profile</NavLink>
     </nav>
   </header>
 );
