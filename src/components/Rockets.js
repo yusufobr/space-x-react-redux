@@ -8,7 +8,7 @@ function Rockets() {
       {rockets.map((rocket) => (
         <div key={rocket.rocket_id} className="flex gap-6">
           <img width={250} src={rocket.flickr_images} alt="flickr" />
-          <div>
+          <div className="text-left">
             <h3 className="text-lg font-semibold mb-2">{rocket.rocket_name}</h3>
             <p>{rocket.description}</p>
           </div>
