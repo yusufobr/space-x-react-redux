@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     dispatch(fetchMissions());
     dispatch(fetchRockets());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="App">
