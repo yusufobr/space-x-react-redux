@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Home = () => (
+const Missions = () => (
   <div>Home</div>
 );
 
-export default Home;
+export default Missions;
