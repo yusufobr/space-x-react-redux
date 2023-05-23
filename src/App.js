@@ -2,16 +2,18 @@ import { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import Navbar from './components/Navbar';
-import Missions from './components/Missions';
 import Rockets from './components/Rockets';
-import './App.css';
+import Missions from './components/Missions';
 import { fetchMissions } from './redux/missions/missionsSlice';
+import { fetchRockets } from './redux/rockets/rocketsSlice';
+import './App.css';
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchMissions());
+    dispatch(fetchRockets());
   }, []);
 
   return (
