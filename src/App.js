@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
+import Missions from './components/Missions';
+import Rockets from './components/Rockets';
 import './App.css';
 
 function App() {
@@ -9,8 +10,9 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Missions />} />
+          <Route path="/missions" element={<Missions />} />
+          <Route path="/rockets" element={<Rockets />} />
         </Routes>
       </BrowserRouter>
     </div>
