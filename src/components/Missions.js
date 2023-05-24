@@ -8,9 +8,9 @@ function Missions() {
   const dispatch = useDispatch();
 
   return (
-    <div className="container mx-auto">
+    <div className="container mt-8 px-4 mx-auto">
       <table className="text-left">
-        <thead>
+        <thead className="h-12">
           <tr>
             <th>Mission</th>
             <th>Description</th>

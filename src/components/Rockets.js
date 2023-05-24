@@ -7,7 +7,7 @@ function Rockets() {
   const dispatch = useDispatch();
 
   return (
-    <div className="container mx-auto flex flex-col gap-6 mt-8">
+    <div className="container px-4 mx-auto flex flex-col gap-6 mt-8">
       {rockets.map((rocket) => (
         <div key={rocket.rocket_id} className="flex gap-6">
           <img width={250} src={rocket.flickr_images} alt="flickr" />

@@ -4,3 +4,7 @@ td {
   border: 1px solid lightgray;
   border-collapse: collapse;
 }
+
+th {
+  padding-left: 16px;
+}
