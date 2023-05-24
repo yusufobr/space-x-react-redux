@@ -28,7 +28,6 @@ export const rocketsSlice = createSlice({
   reducers: {
     addReserve: (state, action) => {
       const idToFind = action.payload;
-      console.log('rockets id ', idToFind);
       const updatedRockets = state.rockets.map((rocket) => {
         if (rocket.rocket_id === idToFind) {
           return {

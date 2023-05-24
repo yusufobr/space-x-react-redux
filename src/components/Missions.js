@@ -31,7 +31,7 @@ function Missions() {
                 <span
                   className={
                     mission.reserved
-                      ? 'bg-blue-500 text-white font-semibold uppercase px-2 rounded-md'
+                      ? 'bg-[#18A2B8] text-white font-semibold uppercase px-2 rounded-md'
                       : 'bg-gray-500 text-white font-semibold uppercase px-2 rounded-md'
                   }
                 >
