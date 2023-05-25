@@ -9,55 +9,59 @@ function Missions() {
 
   return (
     <div className="container mt-8 px-4 mx-auto">
-      <table className="text-left">
-        <thead className="h-12">
-          <tr>
-            <th>Mission</th>
-            <th>Description</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          {missions.map((mission, index) => (
-            <tr
-              key={mission.mission_id}
-              className={index % 2 === 0 ? 'bg-gray-100' : ''}
-            >
-              <td className="text-lg font-bold w-[12.5%] p-4">
-                {mission.mission_name}
-              </td>
-              <td className="p-3 pb-8">{mission.description}</td>
-              <td className="w-[12.5%] text-center">
-                <span
-                  className={
+      {missions.length > 1
+        ? (
+          <table className="text-left">
+            <thead className="h-12">
+              <tr>
+                <th>Mission</th>
+                <th>Description</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {missions.map((mission, index) => (
+                <tr
+                  key={mission.mission_id}
+                  className={index % 2 === 0 ? 'bg-gray-100' : ''}
+                >
+                  <td className="text-lg font-bold w-[12.5%] p-4">
+                    {mission.mission_name}
+                  </td>
+                  <td className="p-3 pb-8">{mission.description}</td>
+                  <td className="w-[12.5%] text-center">
+                    <span
+                      className={
                     mission.reserved
                       ? 'bg-[#18A2B8] text-white font-semibold uppercase px-2 rounded-md'
                       : 'bg-gray-500 text-white font-semibold uppercase px-2 rounded-md'
                   }
-                >
-                  {mission.reserved ? 'active member' : 'not a member'}
-                </span>
-              </td>
-              <td className="w-[12.5%] text-center">
-                <button
-                  type="button"
-                  className={
+                    >
+                      {mission.reserved ? 'active member' : 'not a member'}
+                    </span>
+                  </td>
+                  <td className="w-[12.5%] text-center">
+                    <button
+                      type="button"
+                      className={
                     mission.reserved
                       ? 'py-1 px-3 rounded border-2 text-red-500 border-red-500'
                       : 'py-1 px-3 rounded border-2 border-black'
                   }
-                  id={mission.mission_id}
-                  onClick={() => {
-                    dispatch(addReserve(mission.mission_id));
-                  }}
-                >
-                  {mission.reserved ? 'Leave Mission' : 'Join Mission'}
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+                      id={mission.mission_id}
+                      onClick={() => {
+                        dispatch(addReserve(mission.mission_id));
+                      }}
+                    >
+                      {mission.reserved ? 'Leave Mission' : 'Join Mission'}
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )
+        : <p className="text-left text-2xl">loading ...</p>}
     </div>
   );
 }
