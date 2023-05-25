@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rockets Component renders a list of rockets with reservation functionality 1`] = `"Rockets component"`;
