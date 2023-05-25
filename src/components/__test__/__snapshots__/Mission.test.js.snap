@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Mission Component Should renders Missions component without errors 1`] = `
+<div
+  className="container mt-8 px-4 mx-auto"
+>
+  <p
+    className="text-left text-2xl"
+  >
+    loading ...
+  </p>
+</div>
+`;
