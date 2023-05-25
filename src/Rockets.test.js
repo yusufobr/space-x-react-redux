@@ -44,5 +44,8 @@ describe('Rockets Component', () => {
 
     const reservationStatus = screen.getByText(/Reserved/i);
     expect(reservationStatus).toBeInTheDocument();
+
+    //snapshot testing
+    expect('Rockets component').toMatchSnapshot();
   });
 });
