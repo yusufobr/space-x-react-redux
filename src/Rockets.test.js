@@ -32,7 +32,7 @@ describe('Rockets Component', () => {
     render(
       <Provider store={store}>
         <Rockets />
-      </Provider>
+      </Provider>,
     );
 
     const rocketNames = screen.getAllByText(/Falcon/i);
@@ -46,10 +46,3 @@ describe('Rockets Component', () => {
     expect(reservationStatus).toBeInTheDocument();
   });
 });
-
-
-
-
-
-
-
